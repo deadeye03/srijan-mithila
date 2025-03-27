@@ -1,15 +1,8 @@
-"use client"
-import { color } from 'framer-motion'
-import React, { useEffect, useState } from 'react'
+'use client'
+import React from 'react'
 import { Slide } from 'react-slideshow-image'
 import 'react-slideshow-image/dist/styles.css'
 function HeroSlideSection({ images }: { images: string[] }) {
-    const [isClient, setIsClient] = useState(false)
-    console.log(images)
-
-    useEffect(() => {
-        setIsClient(true);
-    }, [])
 
     const style = {
         textAlign: 'center',

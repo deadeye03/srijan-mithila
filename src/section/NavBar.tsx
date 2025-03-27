@@ -42,6 +42,9 @@ export default async function Navbar() {
           </NavigationMenu>
         ))}
       </ul>
+
+      {/* THIS IS MOBILE VIEW NAV SACTION */}
+
       <ul className='flex gap-4 items-center px-4   md:hidden'>
         <MobileMenu menus={menus} />
         <Link href="/" className='block relative h-10 w-10 rounded-full overflow-hidden'>

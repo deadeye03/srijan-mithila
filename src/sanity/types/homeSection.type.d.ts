@@ -10,3 +10,9 @@ interface SliderShowSchemaType {
     title: string,
     images: string[]
 }
+
+interface HeroSchemaType {
+    title: string,
+    slug: string,
+    imageUrl: string
+}
