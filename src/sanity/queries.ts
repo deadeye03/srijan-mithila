@@ -25,7 +25,6 @@ export const getHeroImageData = async () => {
     return data
 }
 export const getCategoryBySectionData = async (section: string) => {
-    console.log('Seciton', section)
     const query = `*[_type == "homeContent" && contentType =="${section}" ]{
         title,
         description,
@@ -33,5 +32,16 @@ export const getCategoryBySectionData = async (section: string) => {
         slug
     }`
     const data: HeroSchemaType[] = await client.fetch(query)
+    return data
+}
+
+export const getFooterData = async () => {
+    const query = `*[_type == "footer"][0]{
+        title,
+        expolore,
+        help,
+        categories
+    }`
+    const data: FooterSectionSchemaType = await client.fetch(query)
     return data
 }
